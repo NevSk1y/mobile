@@ -1,7 +1,7 @@
 # по заданному варианту номер: 915783624
 import csv
 f = input("Введите путь до файла:")
-num = input("Введите номер телеофна абонента: ")
+num = input("Введите номер телефона абонента: ")
 
 rows = []
 fields = []
@@ -28,6 +28,7 @@ def out_calls():
 		if num in row[1]:
 			T_out += float(row[3])
 	X_out = T_out*k_out
+	print(X_out, "руб. за исходящие звонки")
 	return X_out
 
 # функция тарификации входящих звонков
@@ -37,7 +38,8 @@ def inc_calls():
 	for row in rows[:10]:
 		if num in row[2]:
 			T_inc += float(row[3])
-	X_inc = T_inc*k_inc	
+	X_inc = T_inc*k_inc
+	print(X_inc, "руб. за входящие звонки")
 	return X_inc
 
 # функция тарификации смс
@@ -50,7 +52,9 @@ def sms():
 	Y = (N - 10)*k_sms
 	if Y < 0:
 		Y = 0
+	print(Y, "руб. за СМС")
 	return Y
+
 
 Total = sms()+out_calls()+inc_calls()
 print("Результат тарификации абонента:", Total, "руб.")
