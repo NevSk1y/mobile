@@ -7,10 +7,10 @@ from docx2pdf import convert
 from num2t4ru import num2text, decimal2text
 import decimal
 
-filename = input('‚ведите путь до файла с интернет трафиком: ')
-filename1 = input('‚ведите путь до файла с мобильным трафиком: ')
-num = input('‚ведите номер телефона: ')
-ipaddr = input('‚ведите IP-адрес: ')
+filename = input('Р’РІРµРґРёС‚Рµ РїСѓС‚СЊ РґРѕ С„Р°Р№Р»Р° СЃ РёРЅС‚РµСЂРЅРµС‚ С‚СЂР°С„РёРєРѕРј: ')
+filename1 = input('Р’РІРµРґРёС‚Рµ РїСѓС‚СЊ РґРѕ С„Р°Р№Р»Р° СЃ РјРѕР±РёР»СЊРЅС‹Рј С‚СЂР°С„РёРєРѕРј: ')
+num = input('Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ С‚РµР»РµС„РѕРЅР°: ')
+ipaddr = input('Р’РІРµРґРёС‚Рµ IP-Р°РґСЂРµСЃ: ')
 
 rows = []
 fields = []
@@ -96,8 +96,8 @@ Total1 = summ_traffic_Mb * k
 Total1 = float('{:.2f}'.format(Total1))
 nds = float('{:.2f}'.format((Total + Total1) * 0.2))
 
-int_units = ((u'рубль', u'рублЯ', u'рублей'), 'm')
-exp_units = ((u'копейка', u'копейки', u'копеек'), 'f')
+int_units = ((u'СЂСѓР±Р»СЊ', u'СЂСѓР±Р»СЏ', u'СЂСѓР±Р»РµР№'), 'm')
+exp_units = ((u'РєРѕРїРµР№РєР°', u'РєРѕРїРµР№РєРё', u'РєРѕРїРµРµРє'), 'f')
 translite = str(decimal2text(
 	decimal.Decimal(str(Total + Total1)),
 	int_units=int_units,
