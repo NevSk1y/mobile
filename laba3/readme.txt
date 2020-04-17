@@ -11,7 +11,7 @@ Miloserdov_laba3.py - файл с исходным кодом
 laba3 Miloserdov.pdf - отчет по работе
 output.csv - файл с трафиком NetFlow
 data.csv - файл с исходными данными тарификации
-oplaa.pdf - файл с итоговым счетом
+oplata.pdf - файл с итоговым счетом
 schetinput.docx - файл-шаблон для вставки данных
 
 По вопросам обращайтесь к разработчику на адрес dmmilos1999@gmail.com или telegram: @NevSk1y
