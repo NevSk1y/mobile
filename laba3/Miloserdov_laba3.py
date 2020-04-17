@@ -7,10 +7,10 @@ from docx2pdf import convert
 from num2t4ru import num2text, decimal2text
 import decimal
 
-filename = input('¬ведите путь до файла с интернет трафиком: ')
-filename1 = input('¬ведите путь до файла с мобильным трафиком: ')
-num = input('¬ведите номер телефона: ')
-ipaddr = input('¬ведите IP-адрес: ')
+filename = input('Введите путь до файла с интернет трафиком: ')
+filename1 = input('Введите путь до файла с мобильным трафиком: ')
+num = input('Введите номер телефона: ')
+ipaddr = input('Введите IP-адрес: ')
 
 rows = []
 fields = []
@@ -96,7 +96,7 @@ Total1 = summ_traffic_Mb * k
 Total1 = float('{:.2f}'.format(Total1))
 nds = float('{:.2f}'.format((Total + Total1) * 0.2))
 
-int_units = ((u'рубль', u'рубл€', u'рублей'), 'm')
+int_units = ((u'рубль', u'рубля', u'рублей'), 'm')
 exp_units = ((u'копейка', u'копейки', u'копеек'), 'f')
 translite = str(decimal2text(
 	decimal.Decimal(str(Total + Total1)),
